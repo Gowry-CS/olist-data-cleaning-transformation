@@ -4,7 +4,7 @@
 ##### Bronze → Silver → Gold (Medallion Architecture)
 </div>
 
-<img src="" alt="Olist Data Cleaning">
+<img src="Olist Data Cleaning and Transformation.png" alt="Olist Data Cleaning">
 
 ### 📌 Project Overview
 This project focuses on cleaning, standardising, and transforming messy raw e-commerce data from the Olist dataset into analysis-ready, high-integrity datasets.
