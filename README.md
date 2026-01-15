@@ -11,4 +11,5 @@ The goal of this project is to establish a reliable analytical foundation that s
 
 ### 🏗 Architecture Overview
 | **Layer** | **Purpose** |
+|--------|-------------|---------------|
 | Bronze (raw) | Ingest raw CSV data with minimal transformation |
