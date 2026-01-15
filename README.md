@@ -92,3 +92,18 @@ The Silver layer focuses on **data quality, consistency, and integrity**.
   - Vendor performance analysis
   - Customer behaviour insights
   - Logistics and delivery analytics
+ 
+### 🛠 Tools & Technologies
+- Microsoft Fabric
+- PySpark
+- Spark SQL
+- Lakehouse Architecture
+- Medallion Architecture
+- OLAP Modelling
+
+### 🚀 Key Takeaways
+This project demonstrates:
+- Data preparation and cleaning discipline
+- Pragmatic handling of real-world data imperfections
+- A balance between data accuracy and business realism
+- Readiness for enterprise-scale analytics workflows
