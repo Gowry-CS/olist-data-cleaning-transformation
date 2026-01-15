@@ -15,3 +15,9 @@ The goal of this project is to establish a reliable analytical foundation that s
 | Bronze (raw) | Ingest raw CSV data with minimal transformation |
 | Silver (cleaned) | Clean, validated, standardised, and normalised datasets |
 | Gold (Analytics) | Star/Galaxy schema optimised for analytical queries |
+
+### 🥉 Bronze Layer – Raw Data Ingestion
+- Ingested raw Olist CSV files as-is via Kaggle API
+- Preserved original schema and user-generated fields
+- No assumptions made about data correctness at this stage
+- Used as a single source of truth for raw data
