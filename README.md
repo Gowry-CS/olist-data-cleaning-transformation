@@ -26,7 +26,7 @@ The goal of this project is to establish a reliable analytical foundation that s
 The Silver layer focuses on **data quality, consistency, and integrity**. 
 
 #### Key Cleaning & Transformation Strategies
-###### 1. Geolocation Standardisation
+##### 1. Geolocation Standardisation
 - Resolved inconsistent city name spellings caused by:
   - Accents, casing, spacing, punctuation, and hyphenation
 - Avoided unreliable string-based matching for analysis
