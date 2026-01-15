@@ -38,3 +38,31 @@ The Silver layer focuses on **data quality, consistency, and integrity**.
   - String regularisation
   - Fuzzy matching (Levenshtein distance) for plausible corrections
 - Conservatively handled ambiguous cases to avoid over-cleaning
+
+##### 2. Product Data Integrity
+- Retained products with missing descriptive fields to prevent loss of sales data
+- Categorised unidentified products explicitly (e.g. "unknown")
+- Translated product categories from Portuguese to English
+- Ensured revenue reporting remained accurate and complete
+
+##### 3. Customer & Seller Normalisation
+- Removed user-generated city and state fields
+- Enforced Second Normal Form (2NF)
+- Reconstructed location attributes using validated zip codes
+- Improved referential integrity and analytical consistency
+
+##### 4. Orders & Order Items
+- Converted all date fields to proper datetime formats
+- Verified absence of duplicates and missing critical fields
+- Retained intentional business cases (e.g. free shipping)
+
+##### 5. Payments Reconciliation
+- Identified discrepancies between payments and line items
+- Accounted for cancelled and undelivered orders
+- Preserved business-rule inconsistencies where data was valid
+- Imputed payment installments where logically required
+
+##### 6. Reviews Deduplication
+- Identified true duplicates using full record comparison
+- Removed only exact duplicate rows
+- Preserved all unique customer feedback
