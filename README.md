@@ -13,3 +13,5 @@ The goal of this project is to establish a reliable analytical foundation that s
 | **Layer** | **Purpose** |
 |--------|-------------|
 | Bronze (raw) | Ingest raw CSV data with minimal transformation |
+| Silver (cleaned) | Clean, validated, standardised, and normalised datasets |
+| Gold (Analytics) | Star/Galaxy schema optimised for analytical queries |
