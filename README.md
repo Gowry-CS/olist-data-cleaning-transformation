@@ -21,3 +21,20 @@ The goal of this project is to establish a reliable analytical foundation that s
 - Preserved original schema and user-generated fields
 - No assumptions made about data correctness at this stage
 - Used as a single source of truth for raw data
+
+### 🥈 Silver Layer – Data Cleaning & Transformation
+The Silver layer focuses on **data quality, consistency, and integrity**. 
+
+#### Key Cleaning & Transformation Strategies
+###### 1. Geolocation Standardisation
+- Resolved inconsistent city name spellings caused by:
+  - Accents, casing, spacing, punctuation, and hyphenation
+- Avoided unreliable string-based matching for analysis
+- Standardised location data using:
+  - Zip code–based joins
+  - Official Brazilian municipality reference data (br-city-codes.csv)
+- Applied:
+  - Unicode normalisation (unidecode)
+  - String regularisation
+  - Fuzzy matching (Levenshtein distance) for plausible corrections
+- Conservatively handled ambiguous cases to avoid over-cleaning
