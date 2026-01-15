@@ -9,3 +9,6 @@ This project focuses on cleaning, standardising, and transforming messy raw e-co
 Using the Medallion Architecture (Bronze → Silver → Gold), the project demonstrates how raw, user-generated data can be systematically validated, reconciled, and modelled into a Galaxy Schema optimised for OLAP and downstream analytics.
 The goal of this project is to establish a reliable analytical foundation that supports accurate reporting, business insights, and scalable analytics.
 
+### 🏗 Architecture Overview
+| Layer | Purpose |
+| Bronze (raw) | Ingest raw CSV data with minimal transformation |
