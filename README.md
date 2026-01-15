@@ -10,5 +10,5 @@ Using the Medallion Architecture (Bronze → Silver → Gold), the project demon
 The goal of this project is to establish a reliable analytical foundation that supports accurate reporting, business insights, and scalable analytics.
 
 ### 🏗 Architecture Overview
-| Layer | Purpose |
+| **Layer** | **Purpose** |
 | Bronze (raw) | Ingest raw CSV data with minimal transformation |
