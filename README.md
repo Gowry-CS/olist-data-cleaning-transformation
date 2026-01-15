@@ -66,3 +66,20 @@ The Silver layer focuses on **data quality, consistency, and integrity**.
 - Identified true duplicates using full record comparison
 - Removed only exact duplicate rows
 - Preserved all unique customer feedback
+
+### 🥇 Gold Layer – Analytics Model (Galaxy Schema)
+- Modelled cleaned data into a Galaxy Schema optimised for OLAP
+- Fact tables:
+  - Orders
+  - Order Items
+  - Payments
+- Dimension tables:
+  - Customers
+  - Sellers
+  - Products
+  - Time
+  - Geography
+- Designed to support:
+  - Fast aggregations
+  - Cross-dimensional analysis
+  - Scalable BI workloads
