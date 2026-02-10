@@ -69,7 +69,7 @@ The Silver layer focuses on **data quality, consistency, and integrity**.
 - Removed only exact duplicate rows
 - Preserved all unique customer feedback
 
-##### 7 Issues Log Summary Table
+##### 7. Issues Log Summary Table
 | Dataset | Issue | Rows Affected | Solution |
 |--------|--------|---------|--------|
 | Geolocation | Mismatch of city, state or zipcode prefix | 808 | Use reference city/state data (br-city-codes.csv) to augment existing data and replace city, state or prefix for standardisation |
