@@ -77,10 +77,13 @@ The Silver layer focuses on **data quality, consistency, and integrity**.
 | Seller |Inconsistent city or state names | 131 | Assuming zip_code_prefix is correct, replace existing city or state names using reference city_lookup_table created from reference city/state data (br-city-codes.csv)|
 | Product | `product_id`s with null values for product_category_name, product_name_length, product_description_length, and product_photos_qty | 610 |  | Replace null values with "unknown" string value |
 | Product Category Translation | Missing translation record for corresponding `product_id` in product table | 2 | Add records manually using online translation tool |
-| Order |   |  |  |  |
-| Order Items |   |  |  |  |
-| Payments |   |  |  |  |
-| Reviews |   |  |  |  |
+| Order | Missing `order_id`s found in `order_items` table  | 8 | Add the 8 `order_id`s into `orders` table to ensure referential integrity |
+| Order Items | `freight_value` of 0  | 383 | No action. As the affected orders were of 10 products from 11 sellers, instead of an anomaly it could have be intentional such as a free shipping promotion |
+| Payments | No corresponding `order_id` in `order_items` table  | 775 | No action. Cross checking with `orders` table shows that these `order_status` were not delivered. |
+| Payments | Sum of payment within one `order_id` has slight discrepancy (a few cents)  | 576 | No action. No discernible pattern found in discrepancy and could be a result of business rules rather than data cleanliness |
+| Payments | `payment_type` value as undefined  | 3 | Records dropped as their `order_status` are marked as cancelled |
+| Payments | `payment_installment` value of 0  | 2 | Imputed as 1 since both `order_status` marked as delivered and have payment value along with payment method |
+| Reviews | Duplicate `review_id`  | 1405 | True duplicates identified by joining tables to find rows that have the same `customer_id`, `review_creation_date`, `review_comment_message`, `order_id` and `order_status`. Keeping only the first occurrence (total 65) of these true duplicate `review_id`, the remaining 66 were dropped |
 
 ### 🥇 Gold Layer – Analytics Model (Galaxy Schema)
 - Modelled cleaned data into a Galaxy Schema optimised for OLAP
