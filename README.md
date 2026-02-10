@@ -71,7 +71,7 @@ The Silver layer focuses on **data quality, consistency, and integrity**.
 
 ##### 7 Issues Log Summary Table
 | Dataset | Issue | Rows Affected | Solution |
-|--------|--------|---------|--------|--------|
+|--------|--------|---------|--------|
 | Geolocation | Mismatch of city, state or zipcode prefix | 808 | Use reference city/state data (br-city-codes.csv) to augment existing data and replace city, state or prefix for standardisation |
 | Customer | Inconsistent city or state names | 680 | Assuming zip_code_prefix is correct, replace existing city or state names using reference city_lookup_table created from reference city/state data (br-city-codes.csv)|
 | Seller |Inconsistent city or state names | 131 | Assuming zip_code_prefix is correct, replace existing city or state names using reference city_lookup_table created from reference city/state data (br-city-codes.csv)|
