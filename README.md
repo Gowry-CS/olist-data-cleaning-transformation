@@ -69,6 +69,19 @@ The Silver layer focuses on **data quality, consistency, and integrity**.
 - Removed only exact duplicate rows
 - Preserved all unique customer feedback
 
+##### 7 Issues Log Summary Table
+| Dataset | Issue | Rows Affected | Solution |
+|--------|--------|---------|--------|--------|
+| Geolocation | Mismatch of city, state or zipcode prefix | 808 | Use reference city/state data (br-city-codes.csv) to augment existing data and replace city, state or prefix for standardisation |
+| Customer | Inconsistent city or state names | 680 | Assuming zip_code_prefix is correct, replace existing city or state names using reference city_lookup_table created from reference city/state data (br-city-codes.csv)|
+| Seller |Inconsistent city or state names | 131 | Assuming zip_code_prefix is correct, replace existing city or state names using reference city_lookup_table created from reference city/state data (br-city-codes.csv)|
+| Product | Product_ids with null values for product_category_name, product_name_length, product_description_length, and product_photos_qty | 610 |  | Replace null values with "unknown" string value |
+| Product Category Translation | Missing translation record for corresponding product_id in product table | 2 | Add records manually using online translation tool |
+| Order |   |  |  |  |
+| Order Items |   |  |  |  |
+| Payments |   |  |  |  |
+| Reviews |   |  |  |  |
+
 ### 🥇 Gold Layer – Analytics Model (Galaxy Schema)
 - Modelled cleaned data into a Galaxy Schema optimised for OLAP
 - Fact tables:
